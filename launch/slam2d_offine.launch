@@ -8,6 +8,12 @@
     <arg name="a_thresh"  default="0.5"/>
     <arg name="mrange"    default="20"/>
 
+    <arg name="noise_x" default="0.0"/>
+    <arg name="noise_y" default="0.0"/>
+    <arg name="noise_yaw" default="0.0"/>
+
+    <arg name="strategy" default="gn"/>
+
     <arg name="threads"   default="4"/>
     <arg name="use_compression" default="false"/>
 
@@ -20,6 +26,12 @@
         <param name="d_thresh"  value="$(arg d_thresh)"/>
         <param name="a_thresh"  value="$(arg a_thresh)"/>
         <param name="mrange"    value="$(arg mrange)"/>
+
+        <param name="noise_x" value="$(arg noise_x)"/>
+        <param name="noise_y" value="$(arg noise_y)"/>
+        <param name="noise_yaw" value="$(arg noise_yaw)"/>
+
+        <param name="strategy" value="$(arg strategy)"/>
 
         <param name="use_compression" value="$(arg use_compression)"/>
 

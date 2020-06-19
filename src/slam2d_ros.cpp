@@ -78,6 +78,10 @@ lama::Slam2DROS::Slam2DROS()
     periodic_publish_ = nh_.createTimer(ros::Duration(tmp),
                                         &Slam2DROS::publishCallback, this);
 
+    pnh_.param("noise_x", options.noise_x, options.noise_x);
+    pnh_.param("noise_y", options.noise_y, options.noise_y);
+    pnh_.param("noise_yaw", options.noise_yaw, options.noise_yaw);
+
     slam2d_ = new Slam2D(options);
     slam2d_->setPose(prior);
 
